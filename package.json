@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && cp tizen/* build && tizen build-web -- build && tizen package -t wgt -s harsha -- build/.buildResult",
+    "build": "react-scripts build && cp tizen/* build && tizen build-web -- build && tizen package -t wgt -s default -- build/.buildResult",
     "deploy": "tizen install -n Qalbox.wgt -- build/.buildResult",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

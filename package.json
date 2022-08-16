@@ -1,0 +1,44 @@
+{
+  "name": "react-tizen",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@noriginmedia/norigin-spatial-navigation": "^1.0.5",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "lodash": "^4.17.21",
+    "react": "^16.13.1",
+    "react-app-polyfill": "^1.0.6",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "styled-components": "^5.3.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && cp tizen/* build && tizen build-web -- build && tizen package -t wgt -s harsha -- build/.buildResult",
+    "deploy": "tizen install -n Qalbox.wgt -- build/.buildResult",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.182",
+    "@types/styled-components": "^5.1.26",
+    "video.js": "^7.20.1"
+  }
+}
